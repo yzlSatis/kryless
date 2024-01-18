@@ -113,10 +113,12 @@
                     <input type="text" id="paparaNumber" class="form-control mb-2" readonly>
                     <label for="ininalNumber">Ininal Numarası:</label>
                     <input type="text" id="ininalNumber" class="form-control mb-2" readonly>
+                    <p style="color:red">Satın aldıktan sonra discord sunucumuzda ticket açmayı unutmayın aksi takdirde aldığınız ürün size gelmez!</p>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                    <button type="button" class="btn btn-primary" onclick="confirmPurchase()">Onayla</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmPurchase()">Discord</button>
                 </div>
             </div>
         </div>
@@ -127,13 +129,14 @@
             document.getElementById("productName").innerHTML = "Ürün Adı: " + productName;
             document.getElementById("productPrice").innerHTML = "Fiyat: " + productPrice + " TL";
             document.getElementById("productFeatures").innerHTML = "Özellikler: " + document.querySelector('td:nth-child(2) ul').innerHTML;
-            document.getElementById("paparaNumber").value = "111111111";
-            document.getElementById("ininalNumber").value = "111111111";
+            document.getElementById("paparaNumber").value = "1930075642";
+            document.getElementById("ininalNumber").value = "Yakında Gelecek";
             $('#buyModal').modal('show');
         }
 
         function confirmPurchase() {
             // Burada yapılacak işlemler, örneğin ödeme onayı veya başka bir işlem...
+            window.location.href = "https://discord.gg/vUNH7Xw8";
 
             // İşlem sonrasında modal'ı kapat
             $('#buyModal').modal('hide');
