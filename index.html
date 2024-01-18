@@ -13,46 +13,48 @@
         <h1 class="mb-4">Ürün Listesi</h1>
 
         <?php
-            // Veritabanı bağlantısı
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "ürünler";
 
-            $conn = new mysqli($servername, $username, $password, $dbname);
 
-            // Bağlantı kontrolü
-            if ($conn->connect_error) {
-                die("Bağlantı hatası: " . $conn->connect_error);
-            }
+            if ($result->
+                <table class="table">
+                <thead class="thead-dark"><tr><th>Ürün Adı</th><th>Özellikler</th><th>Fiyat</th><th></th></tr></thead>
+                <tbody>
 
-            // Ürünleri getir
-            $sql = "SELECT id, product_name, price, features FROM products";
-            $result = $conn->query($sql);
+                
+                     <tr>
+                     <td> Vip </td>
+                     <td>  chatte size özel VİP etiketi - Kozmetiklere erişim - haftalık ve günlük ödül - 1 Ay geçerli </td> 
 
-            if ($result->num_rows > 0) {
-                echo '<table class="table">';
-                echo '<thead class="thead-dark"><tr><th>Ürün Adı</th><th>Özellikler</th><th>Fiyat</th><th></th></tr></thead>';
-                echo '<tbody>';
+                     <td> 90.00  TL</td>
+                    <td><button class="btn btn-primary btn-sm" onclick="buyProduct(' . $row["id"] . ', \'' . $row["product_name"] . '\', ' . $row["price"] . ')">Satın Al</button></td>
+                     </tr>
+                     <tr>
+                        <td> Vip+ </td>
+                        <td>  chatte size özel VİP+ etiketi  - Lobide uçuş izni - Kozmetiklere erişim - Kişiye Özel Pelerin - haftalık ve günlük ödül - 1 Ay geçerli </td> 
+   
+                        <td> 170.00  TL</td>
+                       <td><button class="btn btn-primary btn-sm" onclick="buyProduct(' . $row["id"] . ', \'' . $row["product_name"] . '\', ' . $row["price"] . ')">Satın Al</button></td>
+                        </tr>
+                    </tr>
+                    <tr>
+                       <td> Elite Vip </td>
+                       <td>  chatte size özel Elite Vip etiketi - Lobide uçuş izni - Kozmetiklere erişim - Kişiye Özel Pelerin - haftalık ve günlük ödül - Lobi Eşyaları - 1 Ay geçerli </td> 
+  
+                       <td> 260.00  TL</td>
+                      <td><button class="btn btn-primary btn-sm" onclick="buyProduct(' . $row["id"] . ', \'' . $row["product_name"] . '\', ' . $row["price"] . ')">Satın Al</button></td>
+                       </tr>
+                       <tr>
+                        <td> Ultra Vip </td>
+                        <td>  chatte size özel Ultra Vip etiketi - Lobide uçuş izni - Kozmetiklere erişim - Kişiye Özel Pelerin - haftalık ve günlük ödül - istediğiniz 3 kişinin koordinatını görme - Lobi Eşyaları - 3 Ay geçerli </td> 
+   
+                        <td> 350.00  TL</td>
+                       <td><button class="btn btn-primary btn-sm" onclick="buyProduct(' . $row["id"] . ', \'' . $row["product_name"] . '\', ' . $row["price"] . ')">Satın Al</button></td>
+                        </tr>
 
-                while($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row["product_name"] . "</td>";
-                    echo "<td>" . nl2br($row["features"]) . "</td>"; // nl2br fonksiyonu alt alta yazdırmak için
+                    </tbody></table>
+            
 
-                    echo "<td>" . $row["price"] . " TL</td>";
-                    echo '<td><button class="btn btn-primary btn-sm" onclick="buyProduct(' . $row["id"] . ', \'' . $row["product_name"] . '\', ' . $row["price"] . ')">Satın Al</button></td>';
-                    echo "</tr>";
-                }
-
-                echo '</tbody></table>';
-            } else {
-                echo "Tabloda hiç ürün bulunamadı.";
-            }
-
-            // Bağlantıyı kapat
-            $conn->close();
-        ?>
+      
     </div>
 
     <!-- Modal -->
