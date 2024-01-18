@@ -12,49 +12,90 @@
     <div class="container mt-5">
         <h1 class="mb-4">Ürün Listesi</h1>
 
-        <?php
-
-
-            if ($result->
-                <table class="table">
-                <thead class="thead-dark"><tr><th>Ürün Adı</th><th>Özellikler</th><th>Fiyat</th><th></th></tr></thead>
-                <tbody>
-
-                
-                     <tr>
-                     <td> Vip </td>
-                     <td>  chatte size özel VİP etiketi - Kozmetiklere erişim - haftalık ve günlük ödül - 1 Ay geçerli </td> 
-
-                     <td> 90.00  TL</td>
-                     <td><a class="nav-link nav-button" href="https://discord.gg/vUNH7Xw8">Satın Al<i class="fas fa-angle-right ml-1"></i></a></td>                     </tr>
-                     <tr>
-                        <td> Vip+ </td>
-                        <td>  chatte size özel VİP+ etiketi  - Lobide uçuş izni - Kozmetiklere erişim - Kişiye Özel Pelerin - haftalık ve günlük ödül - 1 Ay geçerli </td> 
-   
-                        <td> 170.00  TL</td>
-                        <td><a class="nav-link nav-button" href="https://discord.gg/vUNH7Xw8">Satın Al<i class="fas fa-angle-right ml-1"></i></a></td>                        </tr>
-                    </tr>
-                    <tr>
-                       <td> Elite Vip </td>
-                       <td>  chatte size özel Elite Vip etiketi - Lobide uçuş izni - Kozmetiklere erişim - Kişiye Özel Pelerin - haftalık ve günlük ödül - Lobi Eşyaları - 1 Ay geçerli </td> 
-  
-                       <td> 260.00  TL</td>
-                       <td><a class="nav-link nav-button" href="https://discord.gg/vUNH7Xw8">Satın Al<i class="fas fa-angle-right ml-1"></i></a></td>                       </tr>
-                       <tr>
-                        <td> Ultra Vip </td>
-                        <td>  chatte size özel Ultra Vip etiketi - Lobide uçuş izni - Kozmetiklere erişim - Kişiye Özel Pelerin - haftalık ve günlük ödül - istediğiniz 3 kişinin koordinatını görme - Lobi Eşyaları - 3 Ay geçerli </td> 
-   
-                        <td> 350.00  TL</td>
-                       <td><a class="nav-link nav-button" href="https://discord.gg/vUNH7Xw8">Satın Al<i class="fas fa-angle-right ml-1"></i></a></td>
-                        </tr>
-
-                    </tbody></table>
-            
-
-      
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Ürün Adı</th>
+                    <th>Özellikler</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vip</td>
+                    <td>
+                        <ul>
+                            <li>- Chatte size özel VİP etiketi</li>
+                            <li>- Kozmetiklere erişim</li>
+                            <li>- haftalık ve günlük ödül</li>
+                            <li>- 1 Ay geçerli</li>
+                        </ul>
+                    </td>
+                    <td>90.00 TL</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="buyProduct(1, 'Vip', 90.00)">Satın Al</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vip+</td>
+                    <td>
+                        <ul>
+                            <li>- Chatte size özel VİP+ etiketi</li>
+                            <li>- Lobide uçuş izni</li>
+                            <li>- Kozmetiklere erişim</li>
+                            <li>- Kişye Özel Pelerin</li>
+                            <li>- Haftalık ve günlük ödül</li>
+                            <li>- 1 Ay geçerli</li>
+                        </ul>
+                    </td>
+                    <td>170.00 TL</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="buyProduct(2, 'Vip+', 170.00)">Satın Al</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Elite Vip</td>
+                    <td>
+                        <ul>
+                            <li>- Chatte size özel Elite Vip etiketi</li>
+                            <li>- Lobide uçuş izni</li>
+                            <li>- Kozmetiklere erişim</li>
+                            <li>- Kişye Özel Pelerin</li>
+                            <li>- Haftalık ve günlük ödül</li>
+                            <li>- Lobi Eşyaları</li>
+                            <li>- 1 Ay geçerli</li>
+                        </ul>
+                    </td>
+                    <td>260.00 TL</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="buyProduct(3, 'Elite Vip', 260.00)">Satın Al</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ultra Vip</td>
+                    <td>
+                        <ul>
+                            <li>- Chatte size özel Ultra Vip etiketi</li>
+                            <li>- Lobide uçuş izni</li>
+                            <li>- Kozmetiklere erişim</li>
+                            <li>- Kişye Özel Pelerin</li>
+                            <li>- Haftalık ve günlük ödül</li>
+                            <li>- İstediğiniz 3 kişinin koordinatını görme</li>
+                            <li>- Lobi Eşyaları</li>
+                            <li>- 3 Ay geçerli</li>
+                        </ul>
+                    </td>
+                    <td>350.00 TL</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="buyProduct(4, 'Ultra Vip', 350.00)">Satın Al</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <!-- Modal -->
+    <!-- Satın Al modal'ı -->
     <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -67,16 +108,15 @@
                 <div class="modal-body">
                     <p id="productName"></p>
                     <p id="productPrice"></p>
+                    <p id="productFeatures"></p>
                     <label for="paparaNumber">Papara Numarası:</label>
                     <input type="text" id="paparaNumber" class="form-control mb-2" readonly>
-                    <label for="ininalNumber">İninal Numarası:</label>
+                    <label for="ininalNumber">Ininal Numarası:</label>
                     <input type="text" id="ininalNumber" class="form-control mb-2" readonly>
-                    <p style="color:red">Satın aldıktan sonra discord sunucumuzda ticket açmayı unutmayın aksi takdirde aldığınız ürün size gelmez!</p>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                    <button type="button" class="btn btn-primary" onclick="confirmPurchase()">Discord</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmPurchase()">Onayla</button>
                 </div>
             </div>
         </div>
@@ -86,13 +126,14 @@
         function buyProduct(id, productName, productPrice) {
             document.getElementById("productName").innerHTML = "Ürün Adı: " + productName;
             document.getElementById("productPrice").innerHTML = "Fiyat: " + productPrice + " TL";
-            document.getElementById("paparaNumber").value = "1930075642";
-            document.getElementById("ininalNumber").value = "Yakında Gelecek";
+            document.getElementById("productFeatures").innerHTML = "Özellikler: " + document.querySelector('td:nth-child(2) ul').innerHTML;
+            document.getElementById("paparaNumber").value = "111111111";
+            document.getElementById("ininalNumber").value = "111111111";
             $('#buyModal').modal('show');
         }
 
         function confirmPurchase() {
-            window.location.href = "https://discord.gg/vUNH7Xw8";
+            // Burada yapılacak işlemler, örneğin ödeme onayı veya başka bir işlem...
 
             // İşlem sonrasında modal'ı kapat
             $('#buyModal').modal('hide');
